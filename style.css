@@ -58,6 +58,13 @@ li
     font-family: sourcesans;
     font-size: 16pt;
 }
+
+.bullet
+{
+    float: none;
+    font-family: sourcesans;
+    font-size: 16pt;
+}
   
 li a 
 {
