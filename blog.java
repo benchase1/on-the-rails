@@ -135,7 +135,7 @@ public class blog
       {
       }
 
-      homepage.add(15, "<a href=" + year + "-" + month + "/" + shortTitle + ".html>" + title + " - " + date + "</a><br>");
+      homepage.add(14, "<a href=" + year + "-" + month + "/" + shortTitle + ".html>" + title + " - " + date + "</a><br>");
 
       try
       {
