@@ -28,6 +28,12 @@ p
     font-size: 16pt;
 }
 
+table
+{
+    font-family: sourcesans;
+    font-size: 16pt;
+}
+
 a:link
 {
     color: #3ac74d;

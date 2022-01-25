@@ -1,0 +1,133 @@
+<title>Fixing Fare Zones - On the Rails</title> 
+<meta property="og:title" content="Fixing Fare Zones - On the Rails"/><meta property="og:description" content="On the Rails is a transit blog where I critique the planning of routes and stops."/><meta property="og:url" content="https://transit.benchase.info/2022-01/fixing-fare-zones.html"/><meta property="og:image" content="http://transit.benchase.info/images/embed-img.png"/><link rel=stylesheet href=../style.css><ul><li><a href=../index.html>Home</a></li><li><a href=../about.html>About the Editor</a></li><li><a href=../categories.html>Categories</a></li></ul><h1>Fixing Fare Zones</h1> 
+<h3>January 24, 2022</h3> 
+<p>The MBTA Commuter Rail’s fares are based on the amount of zones traveled. Stations are placed in 1 of 11 zones, numbered 1 through 10, as well as Zone 1A for stations close to the Boston terminal stations (South Station and North Station). Fares are based on distance traveled, so Zone 1 has a cheaper fare than Zone 10. Interzone fares also exist for travelers not going all the way to Boston.</p>
+<p>A major drawback of the Commuter Rail for some passengers is the expensive fares from outer zones. From Grafton, my local Commuter Rail station in Zone 8, it costs $12.25 to get into Boston one way. Wickford Junction, the only station in Zone 10, has a $13.25 one way fare, the most expensive in the network.</p>
+<p>In this entire probably-long post, I’m reforming the entire damn fare system to make for better distance-based pricing on the network. I’m not touching interzone fares here, though. Not getting rid of zones either. Special thanks to those whose thoughts inspired the creation of this post. That would be Maz (for the idea of a fare zone reform), Cedric (for sharing an article about a proposal to unify fares in the Bay Area), Selig (for telling all of us how good Caltrain is with their fares), and Miles (for commenting on <a href=../2021-07/grafton-mbta.html>my Grafton post</a> agreeing with the wackiness of the T’s fare zones).</p>
+<p>To first explain what I’m going to base the zone reform off of, I need to discuss Caltrain in the Bay Area of California. Caltrain is a 77 mile long commuter rail line between San Francisco and Gilroy, California. Caltrain operates with 6 fare zones, numbered 1 through 6. This is the ideal system to look at for the fare zone reform.</p>
+<p>There is also a slight mathematical process to determine all this as well. I took the furthest station in each fare zone, found the distance to the inbound terminal, and divided the price by that distance. I’ll call that number the price per mile for the zone. Caltrain is seen as the ideal system because Zones 2 through 6 have their price per mile all close to each other around $0.20 per mile. This can be fixed for Zone 1 by moving Millbrae and Broadway stations into Zone 1.</p>
+<p>In this post, I’ll be comparing this to the MBTA’s Commuter Rail and Metra in Chicago. With both these systems, the price per mile decreases as you go further out of the inbound terminal. This provides some inequality, as fares closer to Boston and Chicago are proportionally higher than fares further away. This becomes a further issue when you look at the rapid transit networks in both Boston and Chicago. Both cities have transit lines that go into the outer zones and make it far cheaper to take local transit instead of the regional rail lines.</p>
+<p>In Boston, the rapid transit network goes out to Zone 2 on a $2.40 fare. On the Commuter Rail, this costs $7 one way. Zones 1A, 1, and 2 have high prices per mile at $0.62, $0.82, and $0.61 on average, respectively. Zones 9 and 10 for comparison have prices per mile at $0.25 and $0.21, respectively. My proposal is to have a $2.40 fare for all travel within Zones 1A, 1, and 2. This would put the price per mile at $0.21. For Zones 3 through 10, their price per mile will be set to $0.21 per mile, and one way fares will be based proportionally. A table with the old and new fares is included at the end.</p>
+<p>Metra also operates with 10 fare zones, lettered A through J. In Chicago, the rapid transit network goes out to Zone C on a $2.50 fare. On Metra, this costs $5.50 one way. Zones A, B, and C have high prices per mile at $1.13, $0.42, and $0.38 on average, respectively. Zones I and J for comparison have prices per mile at $0.21 and $0.17, respectively. My proposal, similar to the one I had for Boston, is to have a $2.50 fare for all travel within Zones A, B, and C. This would put the price per mile at $0.17. For Zones D through J, their price per mile will be set to $0.17 per mile, and one way fares will be based proportionally. A table with the old and new fares is also included at the end.</p>
+<p><b>Boston</b></p>
+<table width=40%>
+<tr>
+<th>Zone</th>
+<th>Old</th>
+<th>New</th>
+</tr>
+<tr>
+<td>Zone 1A</td>
+<td>$2.40</td>
+<td>$2.40</td>
+</tr>
+<tr>
+<td>Zone 1</td>
+<td>$6.50</td>
+<td>$2.40</td>
+</tr>
+<tr>
+<td>Zone 2</td>
+<td>$7.00</td>
+<td>$2.40</td>
+</tr>
+<tr>
+<td>Zone 3</td>
+<td>$8.00</td>
+<td>$3.25</td>
+</tr>
+<tr>
+<td>Zone 4</td>
+<td>$8.75</td>
+<td>$4.10</td>
+</tr>
+<tr>
+<td>Zone 5</td>
+<td>$9.75</td>
+<td>$4.70</td>
+</tr>
+<tr>
+<td>Zone 6</td>
+<td>$10.50</td>
+<td>$5.50</td>
+</tr>
+<tr>
+<td>Zone 7</td>
+<td>$11.00</td>
+<td>$6.75</td>
+</tr>
+<tr>
+<td>Zone 8</td>
+<td>$12.25</td>
+<td>$8.50</td>
+</tr>
+<tr>
+<td>Zone 9</td>
+<td>$12.75</td>
+<td>$10.90</td>
+</tr>
+<tr>
+<td>Zone 10</td>
+<td>$13.25</td>
+<td>$13.20</td>
+</tr>
+</table>
+<p><b>Chicago</b></p>
+<table width=40%>
+<tr>
+<th>Zone</th>
+<th>Old</th>
+<th>New</th>
+</tr>
+<tr>
+<td>Zone A</td>
+<td>$4.00</td>
+<td>$2.50</td>
+</tr>
+<tr>
+<td>Zone B</td>
+<td>$4.25</td>
+<td>$2.50</td>
+</tr>
+<tr>
+<td>Zone C</td>
+<td>$5.50</td>
+<td>$2.50</td>
+</tr>
+<tr>
+<td>Zone D</td>
+<td>$6.25</td>
+<td>$3.25</td>
+</tr>
+<tr>
+<td>Zone E</td>
+<td>$6.75</td>
+<td>$4.20</td>
+</tr>
+<tr>
+<td>Zone F</td>
+<td>$7.25</td>
+<td>$4.90</td>
+</tr>
+<tr>
+<td>Zone G</td>
+<td>$7.75</td>
+<td>$5.50</td>
+</tr>
+<tr>
+<td>Zone H</td>
+<td>$8.25</td>
+<td>$6.50</td>
+</tr>
+<tr>
+<td>Zone I</td>
+<td>$9.00</td>
+<td>$7.40</td>
+</tr>
+<tr>
+<td>Zone J</td>
+<td>$9.50</td>
+<td>$9.10</td>
+</tr>
+</table>
+<p>Also, I created a far more detailed spreadsheet for both <a href=https://docs.google.com/spreadsheets/d/1i7e4kEzk5nJrpcHDes_sJF2FI2jtp5VCH5adN1qMUqY/edit?usp=sharing>Boston</a> and <a href=https://docs.google.com/spreadsheets/d/1SBL1E7te7cSgj2STYw-Lzc--_SlkVF6nvronLYgqAKk/edit?usp=sharing>Chicago</a> if you’re interested.</p>
