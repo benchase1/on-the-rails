@@ -44,15 +44,15 @@ public class blog
     {
       // new post
 
-      System.out.print("Post title: "); // RIPTA 301 - Rural Ride
+      System.out.print("Post title: "); // 301: Rural Ride
       title = in.nextLine();
       System.out.print("Post short name: "); // ripta-301
       shortTitle = in.nextLine();
-      System.out.print("Post year: "); // 2021
+      System.out.print("Post year: "); // 2022
       year = in.nextLine();
       System.out.print("Post month: "); // 07
       month = in.nextLine();
-      System.out.print("Post date: "); // July 17, 2021
+      System.out.print("Post date: "); // July 11, 2022
       date = in.nextLine();
 
       while (!input.equals("0"))
@@ -89,7 +89,7 @@ public class blog
 
       try
       {
-        File newFile1 = new File("" + year + "-" + month + "/" + shortTitle + ".html"); // 2021-07/ripta-301.html
+        File newFile1 = new File("" + year + "-" + month + "/" + shortTitle + ".html"); // 2022-07/ripta-301.html
         FileWriter fileWriter1 = new FileWriter(newFile1);
 
         fileWriter1.write("<title>" + title + " - On the Rails</title> \n");
@@ -162,7 +162,7 @@ public class blog
       agencyName = in.nextLine();
       System.out.print("Enter agency state: "); // Rhode Island
       agencyState = in.nextLine();
-      System.out.print("Does category exist? ");
+      System.out.print("Does category exist? "); // yes
       agencyChoice = in.nextLine();
 
       if (agencyChoice.equals("yes"))
