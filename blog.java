@@ -1,9 +1,7 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.util.Scanner;
-import java.io.IOException;
-import java.util.ArrayList;
+import java.text.*;
+import java.util.*;
+import java.io.*;
+import java.lang.Math.*;
 
 public class blog
 {
@@ -48,12 +46,22 @@ public class blog
       title = in.nextLine();
       System.out.print("Post short name: "); // ripta-301
       shortTitle = in.nextLine();
-      System.out.print("Post year: "); // 2022
-      year = in.nextLine();
-      System.out.print("Post month: "); // 07
-      month = in.nextLine();
-      System.out.print("Post date: "); // July 11, 2022
-      date = in.nextLine();
+
+      SimpleDateFormat yM = new SimpleDateFormat("yyyy-MM"); // 2022-07
+      Date date1 = new Date();
+      String yearMonth = yM.format(date1);
+      SimpleDateFormat fD = new SimpleDateFormat("MMMMM d, yyyy"); // July 11, 2022
+      Date date2 = new Date();
+      String fullDay = fD.format(date2);
+      SimpleDateFormat dT = new SimpleDateFormat("MMM d, yyyy HH:mm"); // Jul 11, 2022 01:28
+      Date date3 = new Date();
+      String dateTime = dT.format(date3);
+      SimpleDateFormat t = new SimpleDateFormat("HH:mm"); // 01:28
+      Date date4 = new Date();
+      String time = dT.format(date4);
+
+      System.out.println("Posting Date: " + fullDay);
+      System.out.println("Posting Time: " + time);
 
       while (!input.equals("0"))
       {
@@ -89,7 +97,7 @@ public class blog
 
       try
       {
-        File newFile1 = new File("" + year + "-" + month + "/" + shortTitle + ".html"); // 2022-07/ripta-301.html
+        File newFile1 = new File("" + yearMonth + "/" + shortTitle + ".html"); // 2022-07/ripta-301.html
         FileWriter fileWriter1 = new FileWriter(newFile1);
 
         fileWriter1.write("<title>" + title + " - On the Rails</title> \n");
@@ -104,7 +112,7 @@ public class blog
         fileWriter1.append("<li><a href=../about.html>About the Editor</a></li>");
         fileWriter1.append("<li><a href=../categories.html>Categories</a></li></ul>");
         fileWriter1.append("<h1>" + title + "</h1> \n");
-        fileWriter1.append("<h3>" + date + "</h3> \n");
+        fileWriter1.append("<h3>" + fullDay + "</h3> \n");
         fileWriter1.append(paragraph.get(0) + "\n");
 
         for (int j = 1; j < paragraph.size(); j++)
@@ -112,6 +120,7 @@ public class blog
           fileWriter1.append(paragraph.get(j) + "\n");
         }
 
+        fileWriter1.append("<b>Posted:</b> " + dateTime);
         fileWriter1.close();
 
         System.out.println("Post saved.");
@@ -137,7 +146,7 @@ public class blog
       {
       }
 
-      homepage.add(16, "<a href=" + year + "-" + month + "/" + shortTitle + ".html>" + title + " - " + date + "</a><br>");
+      homepage.add(16, "<a href=" + yearMonth + "/" + shortTitle + ".html>" + title + " - " + date + "</a><br>");
 
       try
       {
@@ -188,7 +197,7 @@ public class blog
 
         System.out.print("Listing before: ");
         listBefore = in.nextInt();
-        agencyPage.add(listBefore, "<a href=" + year + "-" + month + "/" + shortTitle + ".html>" + title + " - " + date + "</a><br>");
+        agencyPage.add(listBefore, "<a href=" + yearMonth + "/" + shortTitle + ".html>" + title + " - " + date + "</a><br>");
       }
       else
       {
@@ -205,7 +214,7 @@ public class blog
         agencyPage.add("<title>" + agencyName + " - " + agencyState + " - On the Rails</title> \n");
         agencyPage.add("<h1>" + agencyName + " - " + agencyState + "</h1>");
         agencyPage.add("<p>");
-        agencyPage.add("<a href=" + year + "-" + month + "/" + shortTitle + ".html>" + title + " - " + date + "</a><br>");
+        agencyPage.add("<a href=" + yearMonth + "/" + shortTitle + ".html>" + title + " - " + date + "</a><br>");
         agencyPage.add("</p>");
 
         try
