@@ -102,7 +102,7 @@ public class blog
 
         fileWriter1.write("<title>" + title + " - On the Rails</title> \n");
         fileWriter1.append("<meta name=\"twitter:card\" content=\"summary_large_image\">");
-        fileWriter1.append("<meta property=\"twitter:site\" content=\"@itsbenchase\"/>");
+        fileWriter1.append("<meta property=\"twitter:site\" content=\"@itseliotchase\"/>");
         fileWriter1.append("<meta property=\"og:title\" content=\"" + title + " - On the Rails\"/>");
         fileWriter1.append("<meta property=\"og:description\" content=\"On the Rails is a transit blog where I critique the planning of routes and stops.\"/>");
         fileWriter1.append("<meta property=\"og:url\" content=\"https://transit.benchase.info/" + year + "-" + month + "/" + shortTitle + ".html\"/>");
@@ -120,7 +120,7 @@ public class blog
           fileWriter1.append(paragraph.get(j) + "\n");
         }
 
-        fileWriter1.append("<b>Posted:</b> " + dateTime);
+        fileWriter1.append("<p><b>Posted:</b> " + dateTime + "</p>");
         fileWriter1.close();
 
         System.out.println("Post saved.");
@@ -146,7 +146,7 @@ public class blog
       {
       }
 
-      homepage.add(16, "<a href=" + yearMonth + "/" + shortTitle + ".html>" + title + " - " + date + "</a><br>");
+      homepage.add(16, "<a href=" + yearMonth + "/" + shortTitle + ".html>" + title + " - " + fullDay + "</a><br>");
 
       try
       {
@@ -206,7 +206,7 @@ public class blog
         agencyPage.add("<li><a href=about.html>About the Editor</a></li>");
         agencyPage.add("<li><a class=active href=categories.html>Categories</a></li></ul>");
         agencyPage.add("<meta name=\"twitter:card\" content=\"summary_large_image\">");
-        agencyPage.add("<meta property=\"twitter:site\" content=\"@itsbenchase\"/>");
+        agencyPage.add("<meta property=\"twitter:site\" content=\"@itseliotchase\"/>");
         agencyPage.add("<meta property=\"og:title\" content=\"" + agencyName + " - " + agencyState + "- On the Rails\"/>");
         agencyPage.add("<meta property=\"og:description\" content=\"On the Rails is a transit blog where I critique the planning of routes and stops.\"/>");
         agencyPage.add("<meta property=\"og:url\" content=\"https://transit.benchase.info/posts-" + agencyCode + ".html\"/>");
@@ -214,7 +214,7 @@ public class blog
         agencyPage.add("<title>" + agencyName + " - " + agencyState + " - On the Rails</title> \n");
         agencyPage.add("<h1>" + agencyName + " - " + agencyState + "</h1>");
         agencyPage.add("<p>");
-        agencyPage.add("<a href=" + yearMonth + "/" + shortTitle + ".html>" + title + " - " + date + "</a><br>");
+        agencyPage.add("<a href=" + yearMonth + "/" + shortTitle + ".html>" + title + " - " + fullDay + "</a><br>");
         agencyPage.add("</p>");
 
         try
