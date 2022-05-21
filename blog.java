@@ -53,15 +53,8 @@ public class blog
       SimpleDateFormat fD = new SimpleDateFormat("MMMMM d, yyyy"); // July 11, 2022
       Date date2 = new Date();
       String fullDay = fD.format(date2);
-      SimpleDateFormat dT = new SimpleDateFormat("MMM d, yyyy HH:mm"); // Jul 11, 2022 01:28
-      Date date3 = new Date();
-      String dateTime = dT.format(date3);
-      SimpleDateFormat t = new SimpleDateFormat("HH:mm"); // 01:28
-      Date date4 = new Date();
-      String time = dT.format(date4);
 
       System.out.println("Posting Date: " + fullDay);
-      System.out.println("Posting Time: " + time);
 
       while (!input.equals("0"))
       {
@@ -94,6 +87,10 @@ public class blog
         }
         System.out.println(); // space in editor
       }
+
+      SimpleDateFormat dT = new SimpleDateFormat("MMM d, yyyy HH:mm"); // Jul 11, 2022 01:28
+      Date date3 = new Date();
+      String dateTime = dT.format(date3);
 
       try
       {
@@ -197,7 +194,7 @@ public class blog
 
         System.out.print("Listing before: ");
         listBefore = in.nextInt();
-        agencyPage.add(listBefore, "<a href=" + yearMonth + "/" + shortTitle + ".html>" + title + " - " + date + "</a><br>");
+        agencyPage.add(listBefore, "<a href=" + yearMonth + "/" + shortTitle + ".html>" + title + " - " + fullDay + "</a><br>");
       }
       else
       {
