@@ -42,17 +42,26 @@ public class blog
     {
       // new post
 
-      System.out.print("Post title: "); // 301: Rural Ride
-      title = in.nextLine();
-      System.out.print("Post short name: "); // ripta-301
-      shortTitle = in.nextLine();
-
       SimpleDateFormat yM = new SimpleDateFormat("yyyy-MM"); // 2022-07
       Date date1 = new Date();
       String yearMonth = yM.format(date1);
       SimpleDateFormat fD = new SimpleDateFormat("MMMMM d, yyyy"); // July 11, 2022
       Date date2 = new Date();
       String fullDay = fD.format(date2);
+
+      System.out.print("Post title: "); // 301: Rural Ride
+      title = in.nextLine();
+      
+      if (title.equalsIgnoreCase("date"))
+      {
+        System.out.print("Enter date: ");
+        fullDay = in.nextLine();
+        System.out.print("Post title: ");
+        title = in.nextLine(); 
+      }
+
+      System.out.print("Post short name: "); // ripta-301
+      shortTitle = in.nextLine();
 
       System.out.println("Posting Date: " + fullDay);
 
