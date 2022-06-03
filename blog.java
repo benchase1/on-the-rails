@@ -16,7 +16,6 @@ public class blog
     int i = 1;
     int listBefore = 0;
     String agencyChoice = "no data";
-    String commentExist = "no data";
     String editChoice = "no data";
     String input = "no data";
     String picInput = "no data";
@@ -125,8 +124,12 @@ public class blog
         {
           fileWriter1.append(paragraph.get(j) + "\n");
         }
+		  
+		  fileWriter1.append("<p><b>Posted:</b> " + dateTime + "</p>");
+		  
+		  fileWriter1.append("<h3>Comments</h3>");
+		  fileWriter1.append("<p>Want to submit a comment? Find out how <a href=../2021-08/the-deal-with-comments.html>here</a>.</p>");
 
-        fileWriter1.append("<p><b>Posted:</b> " + dateTime + "</p>");
         fileWriter1.close();
 
         System.out.println("Post saved.");
@@ -304,13 +307,6 @@ public class blog
       }
       catch (FileNotFoundException e)
       {
-      }
-
-      System.out.print("Does section exist? ");
-      commentExist = in.nextLine();
-      if (commentExist.equals("no"))
-      {
-        paragraph.add("<h3>Comments</h3>");
       }
 
       System.out.print("Name: ");
