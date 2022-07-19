@@ -107,7 +107,7 @@ public class blog
 
         fileWriter1.write("<title>" + title + " - On the Rails</title> \n");
         fileWriter1.append("<meta name=\"twitter:card\" content=\"summary_large_image\">");
-        fileWriter1.append("<meta property=\"twitter:site\" content=\"@itseliotchase\"/>");
+        fileWriter1.append("<meta property=\"twitter:site\" content=\"@itsbenchase\"/>");
         fileWriter1.append("<meta property=\"og:title\" content=\"" + title + " - On the Rails\"/>");
         fileWriter1.append("<meta property=\"og:description\" content=\"On the Rails is a transit blog where I critique the planning of routes and stops.\"/>");
         fileWriter1.append("<meta property=\"og:url\" content=\"https://transit.benchase.info/" + year + "-" + month + "/" + shortTitle + ".html\"/>");
@@ -215,7 +215,7 @@ public class blog
         agencyPage.add("<li><a href=about.html>About the Editor</a></li>");
         agencyPage.add("<li><a class=active href=categories.html>Categories</a></li></ul>");
         agencyPage.add("<meta name=\"twitter:card\" content=\"summary_large_image\">");
-        agencyPage.add("<meta property=\"twitter:site\" content=\"@itseliotchase\"/>");
+        agencyPage.add("<meta property=\"twitter:site\" content=\"@itsbenchase\"/>");
         agencyPage.add("<meta property=\"og:title\" content=\"" + agencyName + " - " + agencyState + "- On the Rails\"/>");
         agencyPage.add("<meta property=\"og:description\" content=\"On the Rails is a transit blog where I critique the planning of routes and stops.\"/>");
         agencyPage.add("<meta property=\"og:url\" content=\"https://transit.benchase.info/posts-" + agencyCode + ".html\"/>");
