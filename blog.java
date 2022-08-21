@@ -106,11 +106,9 @@ public class blog
         FileWriter fileWriter1 = new FileWriter(newFile1);
 
         fileWriter1.write("<title>" + title + " - On the Rails</title> \n");
-        fileWriter1.append("<meta name=\"twitter:card\" content=\"summary_large_image\">");
-        fileWriter1.append("<meta property=\"twitter:site\" content=\"@itsbenchase\"/>");
         fileWriter1.append("<meta property=\"og:title\" content=\"" + title + " - On the Rails\"/>");
         fileWriter1.append("<meta property=\"og:description\" content=\"On the Rails is a transit blog where I critique the planning of routes and stops.\"/>");
-        fileWriter1.append("<meta property=\"og:url\" content=\"https://transit.benchase.info/" + year + "-" + month + "/" + shortTitle + ".html\"/>");
+        fileWriter1.append("<meta property=\"og:url\" content=\"https://transit.benchase.info/" + yearMonth + "/" + shortTitle + ".html\"/>");
         fileWriter1.append("<meta property=\"og:image\" content=\"http://transit.benchase.info/images/embed-img.png\"/>");
         fileWriter1.append("<link rel=stylesheet href=../style.css>");
         fileWriter1.append("<ul><li><a href=../index.html>Home</a></li>");
