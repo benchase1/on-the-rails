@@ -106,14 +106,14 @@ public class blog
         FileWriter fileWriter1 = new FileWriter(newFile1);
 
         fileWriter1.write("<title>" + title + " - On the Rails</title> \n");
-        fileWriter1.append("<meta property=\"og:title\" content=\"" + title + " - On the Rails\"/>");
-        fileWriter1.append("<meta property=\"og:description\" content=\"On the Rails is a transit blog where I critique the planning of routes and stops.\"/>");
-        fileWriter1.append("<meta property=\"og:url\" content=\"https://transit.benchase.info/" + yearMonth + "/" + shortTitle + ".html\"/>");
-        fileWriter1.append("<meta property=\"og:image\" content=\"http://transit.benchase.info/images/embed-img.png\"/>");
-        fileWriter1.append("<link rel=stylesheet href=../style.css>");
-        fileWriter1.append("<ul><li><a href=../index.html>Home</a></li>");
-        fileWriter1.append("<li><a href=../about.html>About the Editor</a></li>");
-        fileWriter1.append("<li><a href=../categories.html>Categories</a></li></ul>");
+        fileWriter1.append("<meta property=\"og:title\" content=\"" + title + " - On the Rails\"/> \n");
+        fileWriter1.append("<meta property=\"og:description\" content=\"On the Rails is a transit blog where I critique the planning of routes and stops.\"/> \n");
+        fileWriter1.append("<meta property=\"og:url\" content=\"https://transit.benchase.info/" + yearMonth + "/" + shortTitle + ".html\"/> \n");
+        fileWriter1.append("<meta property=\"og:image\" content=\"http://transit.benchase.info/images/embed-img.png\"/> \n");
+        fileWriter1.append("<link rel=stylesheet href=../style.css> \n");
+        fileWriter1.append("<ul><li><a href=../index.html>Home</a></li> \n");
+        fileWriter1.append("<li><a href=../about.html>About the Editor</a></li> \n");
+        fileWriter1.append("<li><a href=../categories.html>Categories</a></li></ul> \n");
         fileWriter1.append("<h1>" + title + "</h1> \n");
         fileWriter1.append("<h3>" + fullDay + "</h3> \n");
         fileWriter1.append(paragraph.get(0) + "\n");
@@ -153,7 +153,7 @@ public class blog
       {
       }
 
-      homepage.add(16, "<a href=" + yearMonth + "/" + shortTitle + ".html>" + title + " - " + fullDay + "</a><br>");
+      homepage.add(15, "<a href=" + yearMonth + "/" + shortTitle + ".html>" + title + " - " + fullDay + "</a><br>");
 
       try
       {
@@ -208,18 +208,16 @@ public class blog
       }
       else
       {
-        agencyPage.add("<link rel=stylesheet href=style.css>");
-        agencyPage.add("<ul><li><a href=index.html>Home</a></li>");
-        agencyPage.add("<li><a href=about.html>About the Editor</a></li>");
-        agencyPage.add("<li><a class=active href=categories.html>Categories</a></li></ul>");
-        agencyPage.add("<meta name=\"twitter:card\" content=\"summary_large_image\">");
-        agencyPage.add("<meta property=\"twitter:site\" content=\"@itsbenchase\"/>");
-        agencyPage.add("<meta property=\"og:title\" content=\"" + agencyName + " - " + agencyState + "- On the Rails\"/>");
-        agencyPage.add("<meta property=\"og:description\" content=\"On the Rails is a transit blog where I critique the planning of routes and stops.\"/>");
-        agencyPage.add("<meta property=\"og:url\" content=\"https://transit.benchase.info/posts-" + agencyCode + ".html\"/>");
-        agencyPage.add("<meta property=\"og:image\" content=\"http://transit.benchase.info/images/embed-img.png\"/>");
+        agencyPage.add("<link rel=stylesheet href=style.css> \n");
+        agencyPage.add("<ul><li><a href=index.html>Home</a></li> \n");
+        agencyPage.add("<li><a href=about.html>About the Editor</a></li> \n");
+        agencyPage.add("<li><a class=active href=categories.html>Categories</a></li></ul> \n");
+        agencyPage.add("<meta property=\"og:title\" content=\"" + agencyName + " - " + agencyState + "- On the Rails\"/>  \n");
+        agencyPage.add("<meta property=\"og:description\" content=\"On the Rails is a transit blog where I critique the planning of routes and stops.\"/>  \n");
+        agencyPage.add("<meta property=\"og:url\" content=\"https://transit.benchase.info/posts-" + agencyCode + ".html\"/>  \n");
+        agencyPage.add("<meta property=\"og:image\" content=\"http://transit.benchase.info/images/embed-img.png\"/>  \n");
         agencyPage.add("<title>" + agencyName + " - " + agencyState + " - On the Rails</title> \n");
-        agencyPage.add("<h1>" + agencyName + " - " + agencyState + "</h1>");
+        agencyPage.add("<h1>" + agencyName + " - " + agencyState + "</h1> \n");
         agencyPage.add("<p>");
         agencyPage.add("<a href=" + yearMonth + "/" + shortTitle + ".html>" + title + " - " + fullDay + "</a><br>");
         agencyPage.add("</p>");
