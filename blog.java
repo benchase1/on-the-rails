@@ -105,11 +105,10 @@ public class blog
         File newFile1 = new File("" + yearMonth + "/" + shortTitle + ".html"); // 2022-07/ripta-301.html
         FileWriter fileWriter1 = new FileWriter(newFile1);
 
-        fileWriter1.write("<title>" + title + " - On the Rails</title> \n");
-        fileWriter1.append("<meta property=\"og:title\" content=\"" + title + " - On the Rails\"/> \n");
-        fileWriter1.append("<meta property=\"og:description\" content=\"On the Rails is a transit blog where I critique the planning of routes and stops.\"/> \n");
+        fileWriter1.write("<title>" + title + " - Based on Transit</title> \n");
+        fileWriter1.append("<meta property=\"og:title\" content=\"" + title + " - Based on Transit\"/> \n");
+        fileWriter1.append("<meta property=\"og:description\" content=\"The intersection between transit and planning.\"/> \n");
         fileWriter1.append("<meta property=\"og:url\" content=\"https://transit.benchase.info/" + yearMonth + "/" + shortTitle + ".html\"/> \n");
-        fileWriter1.append("<meta property=\"og:image\" content=\"http://transit.benchase.info/images/embed-img.png\"/> \n");
         fileWriter1.append("<link rel=stylesheet href=../style.css> \n");
         fileWriter1.append("<ul><li><a href=../index.html>Home</a></li> \n");
         fileWriter1.append("<li><a href=../about.html>About the Editor</a></li> \n");
@@ -153,7 +152,7 @@ public class blog
       {
       }
 
-      homepage.add(15, "<a href=" + yearMonth + "/" + shortTitle + ".html>" + title + " - " + fullDay + "</a><br>");
+      homepage.add(14, "<a href=" + yearMonth + "/" + shortTitle + ".html>" + title + " - " + fullDay + "</a><br>");
 
       try
       {
@@ -212,11 +211,10 @@ public class blog
         agencyPage.add("<ul><li><a href=index.html>Home</a></li> \n");
         agencyPage.add("<li><a href=about.html>About the Editor</a></li> \n");
         agencyPage.add("<li><a class=active href=categories.html>Categories</a></li></ul> \n");
-        agencyPage.add("<meta property=\"og:title\" content=\"" + agencyName + " - " + agencyState + "- On the Rails\"/>  \n");
-        agencyPage.add("<meta property=\"og:description\" content=\"On the Rails is a transit blog where I critique the planning of routes and stops.\"/>  \n");
+        agencyPage.add("<meta property=\"og:title\" content=\"" + agencyName + " - " + agencyState + " - Based on Transit\"/>  \n");
+        agencyPage.add("<meta property=\"og:description\" content=\"The intersection between transit and planning.\"/>  \n");
         agencyPage.add("<meta property=\"og:url\" content=\"https://transit.benchase.info/posts-" + agencyCode + ".html\"/>  \n");
-        agencyPage.add("<meta property=\"og:image\" content=\"http://transit.benchase.info/images/embed-img.png\"/>  \n");
-        agencyPage.add("<title>" + agencyName + " - " + agencyState + " - On the Rails</title> \n");
+        agencyPage.add("<title>" + agencyName + " - " + agencyState + " - Based on Transit</title> \n");
         agencyPage.add("<h1>" + agencyName + " - " + agencyState + "</h1> \n");
         agencyPage.add("<p>");
         agencyPage.add("<a href=" + yearMonth + "/" + shortTitle + ".html>" + title + " - " + fullDay + "</a><br>");
